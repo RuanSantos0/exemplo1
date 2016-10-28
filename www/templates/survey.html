@@ -1,15 +1,15 @@
 <ion-view title="Survey" id="page2" style="">
   <ion-content padding="true" class="has-header">
     <form id="survey-form1" class="list">
-      <div id="survey-markdown2" ng-app>
+      <div id="survey-markdown2">
         <p style="color:#000000;">Pizzaaaa Barata</p>
       </div>
       <label class="item item-input" id="survey-input2">
         <input placeholder="Name" type="text" ng-model=data.name>
       </label>
-      <label class="item item-select" id="survey-select1" ng-model=data.favorite_color>
+      <label class="item item-select" id="survey-select1">
         <span class="input-label">Favorite Color</span>
-        <select>
+        <select ng-model=data.favorite_color>
           <option>Red</option>
           <option>Green</option>
           <option>Blue</option>
@@ -18,10 +18,10 @@
         </select>
       </label>
       <ion-item class="item-divider" id="survey-list-item-divider1"> Favorite Pizza Topping</ion-item>
-      <ion-radio id="survey-radio2" ng-model=data.favorite_pizza ng-value="Pepperoni" >Pepperoni</ion-radio>
-      <ion-radio id="survey-radio3" ng-model=data.favorite_pizza ng-value="Sausage" >Sausage</ion-radio>
-      <ion-radio id="survey-radio4" ng-model=data.favorite_pizza ng-value="Chesse" >Cheese</ion-radio>
+      <ion-radio id="survey-radio2" ng-model=data.favorite_pizza value="Pepperoni" >Pepperoni</ion-radio>
+      <ion-radio id="survey-radio3" ng-model=data.favorite_pizza value="Sausage" >Sausage</ion-radio>
+      <ion-radio id="survey-radio4" ng-model=data.favorite_pizza value="Chesse" >Cheese</ion-radio>
     </form>
-    <button id="survey-button1" class="button button-balanced  button-block" ng-click="submit" ng-desabled="submitting">Submit</button>
+    <button id="survey-button1" class="button button-balanced  button-block" ng-click="submit()" ng-disabled="submitting">Submit</button>
   </ion-content>
 </ion-view>
